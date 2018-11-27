@@ -391,6 +391,13 @@ IN NO EVENT WILL THE CORPORATION OR ITS MEMBERS OR THEIR AFFILIATES BE LIABLE FO
 			<wsdl:input message="tev:SetSynchronizationPointRequest" wsaw:Action="http://www.onvif.org/ver10/events/wsdl/PullPointSubscription/SetSynchronizationPointRequest"/>
 			<wsdl:output message="tev:SetSynchronizationPointResponse" wsaw:Action="http://www.onvif.org/ver10/events/wsdl/PullPointSubscription/SetSynchronizationPointResponse"/>
 		</wsdl:operation>
+		<wsdl:operation name="Unsubscribe">
+			<wsdl:documentation>
+				Test
+			</wsdl:documentation>
+			<wsdl:input message="tev:UnsubscribeRequest" wsaw:Action="http://docs.oasis-open.org/wsn/bw-2/SubscriptionManager/UnsubscribeRequest"/>
+			<wsdl:output message="tev:UnsubscribeResponse" wsaw:Action="http://docs.oasis-open.org/wsn/bw-2/SubscriptionManager/UnsubscribeResponse"/>
+		</wsdl:operation>
 	</wsdl:portType>
 	<wsdl:binding name="PullPointSubscriptionBinding" type="tev:PullPointSubscription">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -509,7 +516,7 @@ IN NO EVENT WILL THE CORPORATION OR ITS MEMBERS OR THEIR AFFILIATES BE LIABLE FO
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="Unsubscribe">
-			<soap:operation soapAction="http://docs.oasis-open.org/wsn/bw-2/SubscriptionManager/UnsubscribeRequest"/>
+			<soap:operation soapAction="""/>
 			<wsdl:input name="UnsubscribeRequest">
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -679,7 +686,8 @@ IN NO EVENT WILL THE CORPORATION OR ITS MEMBERS OR THEIR AFFILIATES BE LIABLE FO
 				<soap:fault name="UnacceptableTerminationTimeFault" use="literal"/>
 			</wsdl:fault>
 		</wsdl:operation>
-		<wsdl:operation name="Unsubscribe">
+		<wsdl:operation name=
+												 >
 			<soap:operation soapAction="http://docs.oasis-open.org/wsn/bw-2/PausableSubscriptionManager/UnsubscribeRequest"/>
 			<wsdl:input name="UnsubscribeRequest">
 				<soap:body use="literal"/>
